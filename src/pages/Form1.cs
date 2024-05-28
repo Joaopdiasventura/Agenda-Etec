@@ -1,4 +1,5 @@
-﻿using ProjetoAgendaContatos.src.services;
+﻿using ProjetoAgendaContatos.src.pages;
+using ProjetoAgendaContatos.src.services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,6 +36,13 @@ namespace ProjetoAgendaContatos
             {
                 Application.Exit();
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Register nw = new Register();
+            nw.Show();
+            Hide();
         }
     }
 }
