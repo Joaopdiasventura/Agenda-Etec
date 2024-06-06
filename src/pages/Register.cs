@@ -2,13 +2,6 @@
 using ProjetoAgendaContatos.src.dtos;
 using ProjetoAgendaContatos.src.services;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProjetoAgendaContatos.src.pages
@@ -33,7 +26,7 @@ namespace ProjetoAgendaContatos.src.pages
             con.Telefone = Telefone;
             con.Celular = Celular;  
             con.Email = Email;
-            Console.WriteLine(RegisterUser(con));
+            MessageBox.Show(RegisterUser(con));
         }
         public string RegisterUser(Contact cont)
         {
@@ -48,13 +41,24 @@ namespace ProjetoAgendaContatos.src.pages
                 c.Conect();
                 cmd.ExecuteNonQuery();
                 c.Disconnect();
-                return ("Cadastro realizado com sucesso.");
+                maskedTextBox1.Text = "";
+                maskedTextBox2.Text = "";
+                maskedTextBox3.Text = "";
+                maskedTextBox4.Text = "";
+                return ("Contato cadastrado com sucesso.");
             }
 
             catch (MySqlException e)
             {
                 return (e.ToString());
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form1 nw = new Form1();
+            nw.Show();
+            Hide();
         }
     }
 }

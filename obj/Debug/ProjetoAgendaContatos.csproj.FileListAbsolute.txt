@@ -125,3 +125,4 @@ C:\Users\Alunos\Desktop\Agenda-Etec\obj\Debug\ProjetoAgendaContatos.csproj.CoreC
 C:\Users\Alunos\Desktop\Agenda-Etec\obj\Debug\ProjetoAgendaContatos.csproj.CopyComplete
 C:\Users\Alunos\Desktop\Agenda-Etec\obj\Debug\ProjetoAgendaContatos.exe
 C:\Users\Alunos\Desktop\Agenda-Etec\obj\Debug\ProjetoAgendaContatos.pdb
+C:\Users\Alunos\Desktop\Agenda-Etec\obj\Debug\ProjetoAgendaContatos.src.pages.Change.resources

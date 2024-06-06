@@ -21,8 +21,6 @@ namespace ProjetoAgendaContatos
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Conection con = new Conection();
-            MessageBox.Show(con.Conect());
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -41,6 +39,13 @@ namespace ProjetoAgendaContatos
         private void button1_Click(object sender, EventArgs e)
         {
             Register nw = new Register();
+            nw.Show();
+            Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Change nw = new Change();
             nw.Show();
             Hide();
         }
