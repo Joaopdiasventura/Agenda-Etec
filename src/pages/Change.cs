@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using ProjetoAgendaContatos.src.dtos;
 using ProjetoAgendaContatos.src.services;
+using ProjetoAgendaContatos.src.statics;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -61,14 +62,27 @@ namespace ProjetoAgendaContatos.src.pages
         private void button2_Click(object sender, EventArgs e)
         {
             int rowIndex = dataGridView1.SelectedCells[0].RowIndex;
-            object idCellValue = dataGridView1.Rows[rowIndex].Cells["cod"].Value;
-            string sql = "DELETE FROM tbcontato WHERE codcontato = " + idCellValue + ";";
+            object codContato = dataGridView1.Rows[rowIndex].Cells["cod"].Value;
+            string sql = "DELETE FROM tbcontato WHERE codcontato = " + codContato + ";";
 
             MySqlCommand cmd = new MySqlCommand(sql, c.con);
             c.Conect();
             cmd.ExecuteNonQuery();
             c.Disconnect();
             Change nw = new Change();
+            nw.Show();
+            Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int rowIndex = dataGridView1.SelectedCells[0].RowIndex;
+            ChangingContact.codContato = int.Parse(dataGridView1.Rows[rowIndex].Cells["cod"].Value.ToString());
+            ChangingContact.nome = ""+dataGridView1.Rows[rowIndex].Cells["name"].Value;
+            ChangingContact.telefone = "" + dataGridView1.Rows[rowIndex].Cells["phone"].Value;
+            ChangingContact.celular = "" + dataGridView1.Rows[rowIndex].Cells["cell"].Value;
+            ChangingContact.email = "" + dataGridView1.Rows[rowIndex].Cells["email"].Value;
+            Update nw = new Update();
             nw.Show();
             Hide();
         }
