@@ -108,7 +108,6 @@ C:\Users\Alunos\Desktop\Agenda-Etec\bin\Debug\K4os.Compression.LZ4.xml
 C:\Users\Alunos\Desktop\Agenda-Etec\bin\Debug\K4os.Compression.LZ4.Streams.xml
 C:\Users\Alunos\Desktop\Agenda-Etec\bin\Debug\K4os.Hash.xxHash.xml
 C:\Users\Alunos\Desktop\Agenda-Etec\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
-C:\Users\Alunos\Desktop\Agenda-Etec\bin\Debug\MySql.Data.xml
 C:\Users\Alunos\Desktop\Agenda-Etec\bin\Debug\System.Buffers.xml
 C:\Users\Alunos\Desktop\Agenda-Etec\bin\Debug\System.Diagnostics.DiagnosticSource.xml
 C:\Users\Alunos\Desktop\Agenda-Etec\bin\Debug\System.IO.Pipelines.xml
@@ -172,3 +171,8 @@ C:\Users\joaop\projetos\c#\Agenda-Etec\obj\Debug\ProjetoAgendaContatos.exe
 C:\Users\joaop\projetos\c#\Agenda-Etec\obj\Debug\ProjetoAgendaContatos.pdb
 C:\Users\joaop\projetos\c#\Agenda-Etec\bin\Debug\System.Configuration.ConfigurationManager.xml
 C:\Users\joaop\projetos\c#\Agenda-Etec\obj\Debug\ProjetoAgendaContatos.src.pages.Update.resources
+C:\Users\Alunos\Desktop\Agenda-Etec\bin\Debug\MySqlBackup.dll
+C:\Users\Alunos\Desktop\Agenda-Etec\bin\Debug\Zstandard.Net.dll
+C:\Users\Alunos\Desktop\Agenda-Etec\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Alunos\Desktop\Agenda-Etec\bin\Debug\System.Configuration.ConfigurationManager.xml
+C:\Users\Alunos\Desktop\Agenda-Etec\obj\Debug\ProjetoAgendaContatos.src.pages.Update.resources
