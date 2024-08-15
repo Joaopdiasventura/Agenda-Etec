@@ -35,7 +35,14 @@ namespace ProjetoAgendaContatos.src.pages
             c.Conect();
             cmd.ExecuteNonQuery();
             c.Disconnect();
-            Change nw = new Change();
+            Read nw = new Read();
+            nw.Show();
+            Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Read nw = new Read();
             nw.Show();
             Hide();
         }

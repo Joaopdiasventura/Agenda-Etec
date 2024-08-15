@@ -91,7 +91,6 @@ C:\Users\Alunos\Desktop\Agenda-Etec\bin\Debug\K4os.Compression.LZ4.dll
 C:\Users\Alunos\Desktop\Agenda-Etec\bin\Debug\K4os.Compression.LZ4.Streams.dll
 C:\Users\Alunos\Desktop\Agenda-Etec\bin\Debug\K4os.Hash.xxHash.dll
 C:\Users\Alunos\Desktop\Agenda-Etec\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\Alunos\Desktop\Agenda-Etec\bin\Debug\MySql.Data.dll
 C:\Users\Alunos\Desktop\Agenda-Etec\bin\Debug\System.Buffers.dll
 C:\Users\Alunos\Desktop\Agenda-Etec\bin\Debug\System.Configuration.ConfigurationManager.dll
 C:\Users\Alunos\Desktop\Agenda-Etec\bin\Debug\System.Diagnostics.DiagnosticSource.dll
@@ -124,7 +123,6 @@ C:\Users\Alunos\Desktop\Agenda-Etec\obj\Debug\ProjetoAgendaContatos.csproj.CoreC
 C:\Users\Alunos\Desktop\Agenda-Etec\obj\Debug\ProjetoAgendaContatos.csproj.CopyComplete
 C:\Users\Alunos\Desktop\Agenda-Etec\obj\Debug\ProjetoAgendaContatos.exe
 C:\Users\Alunos\Desktop\Agenda-Etec\obj\Debug\ProjetoAgendaContatos.pdb
-C:\Users\Alunos\Desktop\Agenda-Etec\obj\Debug\ProjetoAgendaContatos.src.pages.Change.resources
 C:\Users\joaop\projetos\c#\Agenda-Etec\bin\Debug\ProjetoAgendaContatos.exe.config
 C:\Users\joaop\projetos\c#\Agenda-Etec\bin\Debug\ProjetoAgendaContatos.exe
 C:\Users\joaop\projetos\c#\Agenda-Etec\bin\Debug\ProjetoAgendaContatos.pdb
@@ -171,8 +169,9 @@ C:\Users\joaop\projetos\c#\Agenda-Etec\obj\Debug\ProjetoAgendaContatos.exe
 C:\Users\joaop\projetos\c#\Agenda-Etec\obj\Debug\ProjetoAgendaContatos.pdb
 C:\Users\joaop\projetos\c#\Agenda-Etec\bin\Debug\System.Configuration.ConfigurationManager.xml
 C:\Users\joaop\projetos\c#\Agenda-Etec\obj\Debug\ProjetoAgendaContatos.src.pages.Update.resources
-C:\Users\Alunos\Desktop\Agenda-Etec\bin\Debug\MySqlBackup.dll
-C:\Users\Alunos\Desktop\Agenda-Etec\bin\Debug\Zstandard.Net.dll
-C:\Users\Alunos\Desktop\Agenda-Etec\bin\Debug\Ubiety.Dns.Core.dll
 C:\Users\Alunos\Desktop\Agenda-Etec\bin\Debug\System.Configuration.ConfigurationManager.xml
 C:\Users\Alunos\Desktop\Agenda-Etec\obj\Debug\ProjetoAgendaContatos.src.pages.Update.resources
+C:\Users\Alunos\Desktop\Agenda-Etec\obj\Debug\ProjetoAgendaContatos.src.pages.Read.resources
+C:\Users\Alunos\Desktop\Agenda-Etec\bin\Debug\MySql.Data.dll
+C:\Users\Alunos\Desktop\Agenda-Etec\bin\Debug\MySqlBackup.dll
+C:\Users\Alunos\Desktop\Agenda-Etec\bin\Debug\MySql.Data.xml

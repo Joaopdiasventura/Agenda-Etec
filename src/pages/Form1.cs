@@ -39,36 +39,81 @@ namespace ProjetoAgendaContatos
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void cadastroToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Register nw = new Register();
             nw.Show();
             Hide();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void consultaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Change nw = new Change();
+
+            Read nw = new Read();
             nw.Show();
             Hide();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void backupToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show(Backup("../../Backup"), "Backup do banco de dados", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        public string Backup(string caminho)
+         public string Backup(string caminho)
+         {
+             string dataAtual = DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss");
+             string caminhoBackup = Path.Combine(caminho, "backupContatos_" + dataAtual + ".sql");
+
+             string diretórioBackup = Path.GetDirectoryName(caminhoBackup);
+             if (!Directory.Exists(diretórioBackup))
+             {
+                 Directory.CreateDirectory(diretórioBackup);
+             }
+
+             string connectionString = "Server=localhost;Database=agenda;Uid=root;Pwd=;";
+
+             try
+             {
+                 using (MySqlConnection conn = new MySqlConnection(connectionString))
+                 {
+                     conn.Open();
+
+                     using (MySqlCommand cmd = new MySqlCommand())
+                     {
+                         cmd.Connection = conn;
+
+                         using (MySqlBackup mb = new MySqlBackup(cmd))
+                         {
+                             mb.ExportToFile(caminhoBackup);
+                         }
+                     }
+
+                     conn.Close();
+                 }
+
+                 return "Backup do banco de dados realizado com sucesso!";
+             }
+             catch (MySqlException e)
+             {
+                 return e.ToString();
+             }
+         }
+
+        private void restoreToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string dataAtual = DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss");
-            string caminhoBackup = Path.Combine(caminho, "backupContatos_" + dataAtual + ".sql");
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "SQL Files|*.sql";
+            openFileDialog.Title = "Selecione o arquivo de backup para restaurar";
 
-            string diretórioBackup = Path.GetDirectoryName(caminhoBackup);
-            if (!Directory.Exists(diretórioBackup))
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                Directory.CreateDirectory(diretórioBackup);
+                string caminhoBackup = openFileDialog.FileName;
+                MessageBox.Show(Restore(caminhoBackup), "Restauração do banco de dados", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+        }
 
+        public string Restore(string caminho)
+        {
             string connectionString = "Server=localhost;Database=agenda;Uid=root;Pwd=;";
 
             try
@@ -83,19 +128,20 @@ namespace ProjetoAgendaContatos
 
                         using (MySqlBackup mb = new MySqlBackup(cmd))
                         {
-                            mb.ExportToFile(caminhoBackup);
+                            mb.ImportFromFile(caminho);
                         }
                     }
 
                     conn.Close();
                 }
 
-                return "Backup do banco de dados realizado com sucesso!";
+                return "Restauração do banco de dados realizada com sucesso!";
             }
             catch (MySqlException e)
             {
                 return e.ToString();
             }
         }
+
     }
 }
